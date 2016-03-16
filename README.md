@@ -1,5 +1,6 @@
 # Layer 2 mock shell
-Layer 2 mock shell is a CloudShell package contains a L2 switch, DUT & Driver that supports the new 7.0 connectivity standardization.
+Layer 2 mock shell is a CloudShell package contains a L2 switch, DUT & Driver that supports the new 7.0 connectivity standardization. This "mock" shell simulates the behavior of an L2 within a 7.0 environment and can be used for testing and orchestration development.
+Note that this shell fits the Networking Shell Standard but only the ApplyConnectivityChanges command is implemented (as a mock).
 
 ### Installation
 Import the Shell into CloudShell
