@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="MockL2" FolderFullPath="" Address="1.1.1.1" ModelName="NewL2" Driver="NewL2 Driver" xmlns="http://schemas.qualisystems.com/ResourceManagement/ResourceSchema.xsd">
+  <Attributes>
+    <Attribute Name="User" Value="" />
+    <Attribute Name="Password" Value="YsvV9ORJpYnYcSy5Lh1gYg==" />
+    <Attribute Name="Power Management" Value="False" />
+    <Attribute Name="Enable Password" Value="3M3u7nkDzxWb0aJ/IZYeWw==" />
+    <Attribute Name="System Name" Value="" />
+    <Attribute Name="Contact Name" Value="" />
+    <Attribute Name="OS Version" Value="" />
+    <Attribute Name="Vendor" Value="" />
+    <Attribute Name="Location" Value="" />
+    <Attribute Name="Backup Location" Value="" />
+    <Attribute Name="Model" Value="" />
+    <Attribute Name="SNMP Read Community" Value="" />
+    <Attribute Name="SNMP Write Community" Value="" />
+    <Attribute Name="SNMP V3 Password" Value="" />
+    <Attribute Name="SNMP V3 Private Key" Value="" />
+    <Attribute Name="SNMP V3 User" Value="" />
+    <Attribute Name="SNMP Version" Value="" />
+    <Attribute Name="Console Server IP Address" Value="" />
+    <Attribute Name="Console User" Value="" />
+    <Attribute Name="Console Password" Value="3M3u7nkDzxWb0aJ/IZYeWw==" />
+    <Attribute Name="Console Port" Value="0" />
+    <Attribute Name="CLI Connection Type" Value="Auto" />
+  </Attributes>
+  <ChildResources>
+    <ResourceInfo Name="Chassis" Address="1" ModelName="Generic Chassis">
+      <Attributes>
+        <Attribute Name="Model" Value="" />
+        <Attribute Name="Serial Number" Value="" />
+      </Attributes>
+      <ChildResources>
+        <ResourceInfo Name="Port6" Address="NA" ModelName="Generic Port">
+          <Attributes>
+            <Attribute Name="MAC Address" Value="" />
+            <Attribute Name="L2 Protocol Type" Value="" />
+            <Attribute Name="IPv4 Address" Value="" />
+            <Attribute Name="IPv6 Address" Value="" />
+            <Attribute Name="Port Description" Value="" />
+            <Attribute Name="Bandwidth" Value="0" />
+            <Attribute Name="MTU" Value="0" />
+            <Attribute Name="Duplex" Value="Half" />
+            <Attribute Name="Adjacent" Value="" />
+            <Attribute Name="Auto Negotiation" Value="False" />
+            <Attribute Name="Protocol Type" Value="Transparent" />
+          </Attributes>
+          <ChildResources />
+          <Connections />
+        </ResourceInfo>
+        <ResourceInfo Name="Port4" Address="NA" ModelName="Generic Port">
+          <Attributes>
+            <Attribute Name="MAC Address" Value="" />
+            <Attribute Name="L2 Protocol Type" Value="" />
+            <Attribute Name="IPv4 Address" Value="" />
+            <Attribute Name="IPv6 Address" Value="" />
+            <Attribute Name="Port Description" Value="" />
+            <Attribute Name="Bandwidth" Value="0" />
+            <Attribute Name="MTU" Value="0" />
+            <Attribute Name="Duplex" Value="Half" />
+            <Attribute Name="Adjacent" Value="" />
+            <Attribute Name="Auto Negotiation" Value="False" />
+            <Attribute Name="Protocol Type" Value="Transparent" />
+          </Attributes>
+          <ChildResources />
+          <Connections />
+        </ResourceInfo>
+        <ResourceInfo Name="Port1" Address="1" ModelName="Generic Port">
+          <Attributes>
+            <Attribute Name="IPv4 Address" Value="" />
+            <Attribute Name="IPv6 Address" Value="" />
+            <Attribute Name="Port Description" Value="" />
+            <Attribute Name="Bandwidth" Value="0" />
+            <Attribute Name="MTU" Value="0" />
+            <Attribute Name="Duplex" Value="Half" />
+            <Attribute Name="Adjacent" Value="" />
+            <Attribute Name="Auto Negotiation" Value="False" />
+            <Attribute Name="Protocol Type" Value="Transparent" />
+            <Attribute Name="MAC Address" Value="" />
+            <Attribute Name="L2 Protocol Type" Value="" />
+          </Attributes>
+          <ChildResources />
+          <Connections />
+        </ResourceInfo>
+        <ResourceInfo Name="Port2" Address="NA" ModelName="Generic Port">
+          <Attributes>
+            <Attribute Name="MAC Address" Value="" />
+            <Attribute Name="L2 Protocol Type" Value="" />
+            <Attribute Name="IPv4 Address" Value="" />
+            <Attribute Name="IPv6 Address" Value="" />
+            <Attribute Name="Port Description" Value="" />
+            <Attribute Name="Bandwidth" Value="0" />
+            <Attribute Name="MTU" Value="0" />
+            <Attribute Name="Duplex" Value="Half" />
+            <Attribute Name="Adjacent" Value="" />
+            <Attribute Name="Auto Negotiation" Value="False" />
+            <Attribute Name="Protocol Type" Value="Transparent" />
+          </Attributes>
+          <ChildResources />
+          <Connections />
+        </ResourceInfo>
+        <ResourceInfo Name="Port5" Address="NA" ModelName="Generic Port">
+          <Attributes>
+            <Attribute Name="MAC Address" Value="" />
+            <Attribute Name="L2 Protocol Type" Value="" />
+            <Attribute Name="IPv4 Address" Value="" />
+            <Attribute Name="IPv6 Address" Value="" />
+            <Attribute Name="Port Description" Value="" />
+            <Attribute Name="Bandwidth" Value="0" />
+            <Attribute Name="MTU" Value="0" />
+            <Attribute Name="Duplex" Value="Half" />
+            <Attribute Name="Adjacent" Value="" />
+            <Attribute Name="Auto Negotiation" Value="False" />
+            <Attribute Name="Protocol Type" Value="Transparent" />
+          </Attributes>
+          <ChildResources />
+          <Connections />
+        </ResourceInfo>
+        <ResourceInfo Name="Port3" Address="NA" ModelName="Generic Port">
+          <Attributes>
+            <Attribute Name="MAC Address" Value="" />
+            <Attribute Name="L2 Protocol Type" Value="" />
+            <Attribute Name="IPv4 Address" Value="" />
+            <Attribute Name="IPv6 Address" Value="" />
+            <Attribute Name="Port Description" Value="" />
+            <Attribute Name="Bandwidth" Value="0" />
+            <Attribute Name="MTU" Value="0" />
+            <Attribute Name="Duplex" Value="Half" />
+            <Attribute Name="Adjacent" Value="" />
+            <Attribute Name="Auto Negotiation" Value="False" />
+            <Attribute Name="Protocol Type" Value="Transparent" />
+          </Attributes>
+          <ChildResources />
+          <Connections />
+        </ResourceInfo>
+      </ChildResources>
+      <Connections />
+    </ResourceInfo>
+  </ChildResources>
+  <Connections />
+</ResourceInfo>

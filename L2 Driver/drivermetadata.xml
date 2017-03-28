@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Driver Name="NewL2 Driver" Version="1.0.0" MainClass="newL2driver.NewL2Driver" Description="Driver description">
+  <Layout>
+    <Category Name="Hidden Commands">
+
+      <Command Name="add_vlan" DisplayName="Add VLAN" Description="" Tags="remote_connectivity">
+        <Parameters>
+          <Parameter Name="VLAN_Ranges" Type="String" Mandatory = "True" DefaultValue="" DisplayName="VLAN Ranges" Description=""/>
+          <Parameter Name="VLAN_Mode" Type="String" Mandatory = "True" DefaultValue="Access" AllowedValues="Access,Trunk" DisplayName="Mode" Description="r"/>
+          <Parameter Name="additional_info" Type="String" Mandatory = "False" DefaultValue="" AllowedValues="" DisplayName="" Description=""/>
+          <Parameter Name="qnq" Type="String" Mandatory = "False" DefaultValue="" AllowedValues="" DisplayName="" Description=""/>
+          <Parameter Name="ctag" Type="String" Mandatory = "False" DefaultValue="" AllowedValues="" DisplayName="" Description=""/>
+        </Parameters>
+      </Command>
+
+      <Command Name="remove_vlan" DisplayName="Remove VLAN" Description="" Tags="remote_connectivity">
+        <Parameters>
+          <Parameter Name="VLAN_Ranges" Type="String" Mandatory = "True" DefaultValue="" DisplayName="VLAN Ranges" Description=""/>
+          <Parameter Name="VLAN_Mode" Type="String" Mandatory = "True" DefaultValue="Access" AllowedValues="Access,Trunk" DisplayName="Mode" Description="r"/>
+          <Parameter Name="additional_info" Type="String" Mandatory = "False" DefaultValue="" AllowedValues="" DisplayName="" Description=""/>
+          <Parameter Name="qnq" Type="String" Mandatory = "False" DefaultValue="" AllowedValues="" DisplayName="" Description=""/>
+          <Parameter Name="ctag" Type="String" Mandatory = "False" DefaultValue="" AllowedValues="" DisplayName="" Description=""/>
+        </Parameters>
+      </Command>
+
+      <Command Name="send_custom_command" DisplayName="send_custom_command" Tags="">
+        <Parameters>
+          <Parameter Name="command" Type="String" Mandatory = "True" DefaultValue=""  Description=""/>
+        </Parameters>
+      </Command>
+
+      <!-- All the commands listed under the "hidden commands" category will not be visible in the user interface, you can still call them from automation -->
+    </Category>
+	
+	<Category Name="aaa">
+	<Command Name="ApplyConnectivityChanges" DisplayName="ApplyConnectivityChanges" Tags="allow_unreserved">
+        <Parameters>
+          <Parameter Name="request" Type="String" Mandatory = "True" DefaultValue="" Description=""/>
+        </Parameters>
+      </Command>
+	</Category>
+  </Layout>
+</Driver>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="DUT1" FolderFullPath="" Address="1" ModelName="Generic Chassis Model" xmlns="http://schemas.qualisystems.com/ResourceManagement/ResourceSchema.xsd">
+  <Attributes>
+    <Attribute Name="UniqueID" Value="" />
+    <Attribute Name="Referencearchi3" Value="aardvark" />
+  </Attributes>
+  <ChildResources>
+    <ResourceInfo Name="Blade 1" Address="1" ModelName="Generic Blade Model">
+      <Attributes>
+        <Attribute Name="UniqueID" Value="" />
+      </Attributes>
+      <ChildResources>
+        <ResourceInfo Name="Port 1" Address="1" ModelName="Generic Ethernet Port">
+          <Attributes>
+            <Attribute Name="Protocol Type" Value="Ethernet" />
+            <Attribute Name="Speed" Value="1 Gbps" />
+            <Attribute Name="Autoneg Capability" Value="1 Gbps FD" />
+            <Attribute Name="Duplex" Value="Full" />
+          </Attributes>
+          <ChildResources />
+			<Connections>
+            <Connection ConnectedTo="MockL2/Chassis/Port1" Weight="10" />
+          </Connections>
+        </ResourceInfo>
+        <ResourceInfo Name="Port 2" Address="2" ModelName="Generic Ethernet Port">
+          <Attributes>
+            <Attribute Name="Protocol Type" Value="Ethernet" />
+            <Attribute Name="Speed" Value="1 Gbps" />
+            <Attribute Name="Autoneg Capability" Value="1 Gbps FD" />
+            <Attribute Name="Duplex" Value="Full" />
+          </Attributes>
+          <ChildResources />
+          <Connections>
+            <Connection ConnectedTo="MockL2/Chassis/Port2" Weight="10" />
+          </Connections>
+        </ResourceInfo>
+        <ResourceInfo Name="Port 3" Address="3" ModelName="Generic Ethernet Port">
+          <Attributes>
+            <Attribute Name="Protocol Type" Value="Ethernet" />
+            <Attribute Name="Speed" Value="1 Gbps" />
+            <Attribute Name="Autoneg Capability" Value="1 Gbps FD" />
+            <Attribute Name="Duplex" Value="Full" />
+          </Attributes>
+          <ChildResources />
+          <Connections>
+            <Connection ConnectedTo="MockL2/Chassis/Port3" Weight="10" />
+          </Connections>
+        </ResourceInfo>
+      </ChildResources>
+      <Connections />
+    </ResourceInfo>
+  </ChildResources>
+  <Connections />
+</ResourceInfo>
