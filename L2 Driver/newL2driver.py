@@ -82,7 +82,7 @@ class NewL2Driver(ResourceDriverInterface, NetworkingResourceDriverInterface):
         response = {"driverResponse":{"actionResults":[]}}
 
         for actionResult in requestJson['driverRequest']['actions']:
-            actionResultTemplate = {"actionId":None, "type":None, "infoMessage":"", "errorMessage":"", "success":True, "updatedInterface":"None"}
+            actionResultTemplate = {"actionId":None, "type":None, "infoMessage":"", "errorMessage":"", "success":"True", "updatedInterface":"None"}
             actionResultTemplate['type'] = str(actionResult['type'])
             actionResultTemplate['actionId'] = str(actionResult['actionId'])
             response["driverResponse"]["actionResults"].append(actionResultTemplate)
