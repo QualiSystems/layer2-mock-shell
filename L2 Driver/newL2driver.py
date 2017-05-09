@@ -7,7 +7,32 @@ import drivercontext
 import os
 import json
 
+
 class NewL2Driver(ResourceDriverInterface, NetworkingResourceDriverInterface):
+    def health_check(self, context):
+        raise NotImplementedError()
+
+    def shutdown(self, context):
+        raise NotImplementedError()
+
+    def orchestration_restore(self, context, saved_artifact_info, custom_params):
+        raise NotImplementedError()
+
+    def save(self, context, folder_path, configuration_type, vrf_management_name):
+        raise NotImplementedError()
+
+    def run_custom_command(self, context, custom_command):
+        raise NotImplementedError()
+
+    def restore(self, context, path, configuration_type, restore_method, vrf_management_name):
+        raise NotImplementedError()
+
+    def run_custom_config_command(self, context, custom_command):
+        raise NotImplementedError()
+
+    def orchestration_save(self, context, mode, custom_params):
+        raise NotImplementedError()
+
     def __init__(self):
         pass
 
@@ -67,11 +92,11 @@ class NewL2Driver(ResourceDriverInterface, NetworkingResourceDriverInterface):
         :type context: drivercontext.ResourceCommandContext
         :type json: str
         """
-        session_cloud = cloudshell.api.cloudshell_api.\
+        session_cloud = cloudshell.api.cloudshell_api. \
             CloudShellAPISession(context.connectivity.server_address,
                                  token_id=context.connectivity.admin_auth_token, domain=context.reservation.domain)
 
-        #Write request
+        # Write request
         requestJson = json.loads(request)
         session_cloud.WriteMessageToReservationOutput(context.reservation.reservation_id,
                                                       json.dumps(requestJson, indent=4, sort_keys=True))
@@ -79,15 +104,17 @@ class NewL2Driver(ResourceDriverInterface, NetworkingResourceDriverInterface):
                                                       "-------------------------------------")
 
         ##Build Response
-        response = {"driverResponse":{"actionResults":[]}}
+        response = {"driverResponse": {"actionResults": []}}
 
         for actionResult in requestJson['driverRequest']['actions']:
-            actionResultTemplate = {"actionId":None, "type":None, "infoMessage":"", "errorMessage":"", "success":"True", "updatedInterface":"None"}
+            actionResultTemplate = {"actionId": None, "type": None, "infoMessage": "", "errorMessage": "",
+                                    "success": "True", "updatedInterface": "None"}
             actionResultTemplate['type'] = str(actionResult['type'])
             actionResultTemplate['actionId'] = str(actionResult['actionId'])
             response["driverResponse"]["actionResults"].append(actionResultTemplate)
 
-        session_cloud.WriteMessageToReservationOutput(context.reservation.reservation_id, "Response \n" + json.dumps(response, indent=4, sort_keys=True))
+        session_cloud.WriteMessageToReservationOutput(context.reservation.reservation_id,
+                                                      "Response \n" + json.dumps(response, indent=4, sort_keys=True))
         return 'command_json_result=' + str(response) + '=command_json_result_end'
 
     def load_firmware(self, context, remote_host, file_path):
@@ -103,33 +130,6 @@ class NewL2Driver(ResourceDriverInterface, NetworkingResourceDriverInterface):
         raise NotImplementedError()
 
     def send_custom_command(self, context, command):
-        """
-        :type context: cloudshell.shell.core.driver_context.ResourceCommandContext
-        """
-        raise NotImplementedError()
-
-    def restore(self, context, path, restore_method):
-        """
-        :type context: cloudshell.shell.core.driver_context.ResourceCommandContext
-        """
-        raise NotImplementedError()
-
-    def send_custom_config_command(self, context, command):
-        """
-        :type context: cloudshell.shell.core.driver_context.ResourceCommandContext
-        """
-        raise NotImplementedError()
-
-    def save(self, context, folder_path, configuration_type):
-        """
-        :type context: cloudshell.shell.core.driver_context.ResourceCommandContext
-        :rtype
-        """
-        # filename = '<FILENAME>,'
-        # return filename
-        raise NotImplementedError()
-
-    def shutdown(self):
         """
         :type context: cloudshell.shell.core.driver_context.ResourceCommandContext
         """
